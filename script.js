@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-const guest = params.get("guest") || "Dear";
+const guest = params.get("guest") || "Dear Anish";
 
 document.getElementById("guestName").innerText = `${guest}`;
 
