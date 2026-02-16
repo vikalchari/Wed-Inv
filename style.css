@@ -38,6 +38,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.photo-full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+
 /*
 .photo-full::after {
   content: "";
