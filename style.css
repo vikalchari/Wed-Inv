@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fbf7f2;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  color: #c9a24d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.initials {
+  font-family: 'Cinzel', serif;
+  font-size: 64px;
+}
+
+.greeting h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #5a0f1b;
+}
+
+.invite .names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+}
+
+.event {
+  margin: 12px;
+  padding: 16px;
+  border: 1px solid #c9a24d;
+  display: inline-block;
+}
