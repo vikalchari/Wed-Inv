@@ -6,14 +6,6 @@ body {
   text-align: center;
 }
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(to bottom, #1a1a1a, #000);
-  color: #c9a24d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .initials {
   font-family: 'Cinzel', serif;
