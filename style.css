@@ -29,6 +29,7 @@ body {
 }
 
 .photo-full {
+  position: relative;
   width: 100%;
   height: 100vh;              /* Full screen height */
   background-image: url("assets/wedinv.jpg");
