@@ -1,5 +1,3 @@
-alert("JS is running");
-
 const params = new URLSearchParams(window.location.search);
 const guest = params.get("guest") || "Anish & Family";
 
