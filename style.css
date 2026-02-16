@@ -31,6 +31,19 @@ body {
   font-size: 56px;
 }
 
+
+.photo {
+  padding: 40px 20px;
+}
+
+.photo img {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+
 .event {
   margin: 12px;
   padding: 16px;
