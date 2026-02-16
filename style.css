@@ -36,12 +36,15 @@ body {
   padding: 40px 20px;
 }
 
-.photo img {
-  width: 90%;
-  max-width: 420px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+.photo-full {
+  width: 100%;
+  height: 100vh;              /* Full screen height */
+  background-image: url("assets/wedinv.jpg");
+  background-size: cover;     /* Auto adjust */
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 
 .event {
