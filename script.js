@@ -1,22 +1,29 @@
-const params = new URLSearchParams(window.location.search);
-const guest = params.get("guest") || "Anish & Family";
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
 
-const guestEl = document.getElementById("guestName");
+  // decodeURIComponent ensures special characters work
+  const guest =
+    params.get("guest")
+      ? decodeURIComponent(params.get("guest"))
+      : "Anish & Family";
 
-if (guestEl) {
-  guestEl.textContent = `Dear ${guest}`;
-} else {
-  console.error("guestName element not found");
-}
+  const guestEl = document.getElementById("guestName");
 
-gsap.from(".initials", {
-  opacity: 0,
-  y: 30,
-  duration: 2
-});
+  if (guestEl) {
+    guestEl.textContent = `Dear ${guest}`;
+    guestEl.style.opacity = "1"; // force visibility
+  }
 
-gsap.from(".greeting", {
-  opacity: 0,
-  y: 20,
-  delay: 2
+  gsap.from(".initials", {
+    opacity: 0,
+    y: 30,
+    duration: 2
+  });
+
+  gsap.from(".greeting", {
+    opacity: 0,
+    y: 20,
+    delay: 1.5,
+    duration: 1.5
+  });
 });
