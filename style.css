@@ -30,6 +30,16 @@ section {
   font-size: 16px;
 }
 
+.page-section {
+  display: none;
+  padding: 120px 40px;
+}
+
+.page-section.active {
+  display: block;
+}
+
+
 .navbar a:hover {
   text-decoration: underline;
 }
