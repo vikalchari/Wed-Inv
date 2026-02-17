@@ -142,3 +142,20 @@ html {
   padding-top: 60px;   /* space for navbar */
   padding-bottom: 20px;
 }
+
+.page {
+  padding: 140px 20px 60px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-grid img {
+  width: 260px;
+  border-radius: 10px;
+}
