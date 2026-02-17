@@ -45,13 +45,13 @@ html {
 
 
 .page-section {
-  display: none;
+  /*display: none;*/
   padding: 15px 5px;
 }
 
-.page-section.active {
+/*.page-section.active {
   display: block;
-}
+}*/
 
 
 .navbar a:hover {
