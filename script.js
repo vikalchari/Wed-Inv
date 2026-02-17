@@ -27,3 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5
   });
 });
+
+const navLinks = document.querySelectorAll(".navbar a");
+const sections = document.querySelectorAll(".page-section");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const target = link.getAttribute("data-section");
+
+    sections.forEach(section => {
+      section.classList.remove("active");
+    });
+
+    document.getElementById(target).classList.add("active");
+  });
+});
