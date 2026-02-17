@@ -159,3 +159,8 @@ html {
   width: 260px;
   border-radius: 10px;
 }
+
+.navbar a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
