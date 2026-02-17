@@ -30,7 +30,7 @@ html {
   margin: 0;
   padding: 0;
 
-  z-index: 9999;
+  z-index: 10000;
 }
 
 
@@ -88,6 +88,7 @@ html {
   background-size: cover;     /* Auto adjust */
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .photo-full::after {
@@ -95,6 +96,7 @@ html {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.15);
+   pointer-events: none; /* THIS FIXES CLICK ISSUE */
 }
 
 
