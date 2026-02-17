@@ -35,11 +35,14 @@ section {
 
 
 .navbar a {
+  display: inline-block;
+  text-align: left;
   font-family: 'Cinzel', serif;
   text-decoration: none;
   color: #7a2c2c;
   font-size: 16px;
 }
+
 
 .page-section {
   display: none;
