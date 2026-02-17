@@ -6,6 +6,14 @@ body {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 20px;
+}
+
 
 .initials {
   font-family: 'Cinzel', serif;
