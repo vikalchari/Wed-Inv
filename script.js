@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
 
-  // decodeURIComponent ensures special characters work
   const guest =
     params.get("guest")
       ? decodeURIComponent(params.get("guest"))
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (guestEl) {
     guestEl.textContent = `Dear ${guest}`;
-    guestEl.style.opacity = "1"; // force visibility
+    guestEl.style.opacity = "1";
   }
 
   gsap.from(".initials", {
@@ -28,19 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const navLinks = document.querySelectorAll(".navbar a");
-const sections = document.querySelectorAll(".page-section");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const target = link.getAttribute("data-section");
-
-    sections.forEach(section => {
-      section.classList.remove("active");
-    });
-
-    document.getElementById(target).classList.add("active");
-  });
-});
