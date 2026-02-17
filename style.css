@@ -65,13 +65,13 @@ html {
 }
 
 .greeting h2 {
-  font-family: 'Georgia', cursive;
+  font-family: 'Georgia', serif;
   font-size: 48px;
   color: #5a0f1b;
 }
 
 .invite .names {
-  font-family: 'Georgia', cursive;
+  font-family: 'Georgia', serif;
   font-size: 56px;
 }
 
