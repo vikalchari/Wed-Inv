@@ -83,7 +83,7 @@ html {
 .photo-full {
   position: relative;
   width: 100%;
-  height: 100vh;              /* Full screen height */
+  height: 95vh;              /* Full screen height */
   background-image: url("assets/wedinv2.jpg");
   background-size: cover;     /* Auto adjust */
   background-position: center;
@@ -127,20 +127,18 @@ html {
 .page-section {
   opacity: 0;
   transition: opacity 0.5s ease;
+  text-align: center;
 }
 
 .page-section.active {
   opacity: 1;
-}
-.page-section {
-  text-align: center;
 }
 
 .greeting {
   margin-top: 10px;
 }
 
-#home {
+.home {
   padding-top:60px;   /* space for navbar */
   padding-bottom: 20px;
 }
