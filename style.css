@@ -3,7 +3,7 @@ body {
   font-family: 'Playfair Display', serif;
   background: #fbf7f2;
   color: #1a1a1a;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 html {
@@ -131,4 +131,7 @@ section {
 
 .page-section.active {
   opacity: 1;
+}
+.page-section {
+  text-align: center;
 }
