@@ -27,25 +27,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const flowerContainer = document.getElementById("flower-container");
+document.addEventListener("DOMContentLoaded", () => {
+  const flowerContainer = document.getElementById("flower-container");
 
-function createFlower() {
-  const flower = document.createElement("div");
-  flower.classList.add("flower");
+  function createFlower() {
+    const flower = document.createElement("div");
+    flower.className = "flower";
 
-  const flowers = ["🌸", "🌺", "🌼", "🌷", "💐"];
-  flower.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+    const emojis = ["🌸", "🌹","🌺", "🌼", "🌷", "💐"];
+    flower.innerText = emojis[Math.floor(Math.random() * emojis.length)];
 
-  flower.style.left = Math.random() * 100 + "vw";
-  flower.style.animationDuration = 4 + Math.random() * 6 + "s";
-  flower.style.fontSize = 18 + Math.random() * 18 + "px";
-  flower.style.opacity = Math.random();
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.fontSize = 16 + Math.random() * 24 + "px";
+    flower.style.opacity = Math.random();
+    flower.style.animationDuration = 5 + Math.random() * 5 + "s";
 
-  flowerContainer.appendChild(flower);
+    flowerContainer.appendChild(flower);
 
-  setTimeout(() => {
-    flower.remove();
-  }, 10000);
-}
+    setTimeout(() => {
+      flower.remove();
+    }, 10000);
+  }
 
-setInterval(createFlower, 250);
+  setInterval(createFlower, 200);
+});
+
