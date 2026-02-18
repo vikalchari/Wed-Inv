@@ -341,7 +341,7 @@ body > *:not(#flower-container) {
 
 /* HEART */
 .name-wrapper .heart {
-  font-size: 64px;
+  font-size: 54px;
   color: #b23a48;
   animation: heartbeat 1.6s infinite;
 }
