@@ -306,29 +306,51 @@ body > *:not(#flower-container) {
 }
 
 /* Rahul & Priya */
+/* ROYAL NAME SECTION */
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin: 80px 0;
+}
+
+/* GOLD GRADIENT TEXT */
 .name-wrapper h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 72px;        /* BIG names */
-  font-weight: 700;
-  margin: 0;
-  color: #2b2b2b;
-}
-
-/* Ampersand */
-.name-wrapper .amp {
   font-family: 'Great Vibes', cursive;
-  font-size: 90px;
-  color: #a85040;
-  line-height: 1;
+  font-size: 84px;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #b88a2d,
+    #f7d774,
+    #b88a2d
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Mobile adjustment */
+/* HEART */
+.name-wrapper .heart {
+  font-size: 64px;
+  color: #b23a48;
+  animation: heartbeat 1.6s infinite;
+}
+
+/* HEART BEAT */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .name-wrapper h2 {
-    font-size: 44px;
+    font-size: 52px;
   }
 
-  .name-wrapper .amp {
-    font-size: 60px;
+  .name-wrapper .heart {
+    font-size: 42px;
   }
 }
+
