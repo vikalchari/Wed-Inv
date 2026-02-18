@@ -20,9 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 20,
     delay: 0.5,
     duration: 1.5
+    
   });
 
+gsap.from(".name-wrapper h2", {
+  opacity: 0,
+  scale: 0.8,
+  duration: 1.8,
+  stagger: 0.4,
+  ease: "power3.out",
+  delay: 0.6
+});
 
+gsap.from(".heart", {
+  opacity: 0,
+  scale: 0,
+  duration: 1,
+  ease: "back.out(1.7)",
+  delay: 1.2
+});
+
+
+
+  
   /* ===============================
      FLOWER FALL
   =============================== */
