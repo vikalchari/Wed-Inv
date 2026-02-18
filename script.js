@@ -56,18 +56,29 @@ function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
 
-  const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
-  flower.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+  const emojis = ["🌸", "🌺", "🌼", "🌷", "💐"];
+  flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  const stopY = nameWrapper.getBoundingClientRect().top + window.scrollY - 40;
+  const stopY =
+    nameWrapper.getBoundingClientRect().top + window.scrollY - 40;
 
-  flower.style.left = Math.random() * 100 + "vw";
-  flower.style.fontSize = 16 + Math.random() * 24 + "px";
+  flower.style.left = Math.random() * window.innerWidth + "px";
+  flower.style.fontSize = 18 + Math.random() * 22 + "px";
   flower.style.opacity = Math.random();
   flower.style.animationDuration = 6 + Math.random() * 5 + "s";
 
-  // 🌸 STOP POINT
-  flower.style.setProperty("--stopY", stopY + "px");
+  // 🔥 FORCE MOVEMENT
+  flower.animate(
+    [
+      { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
+    ],
+    {
+      duration: (6 + Math.random() * 5) * 1000,
+      easing: "linear",
+      fill: "forwards"
+    }
+  );
 
   flowerContainer.appendChild(flower);
 
@@ -75,6 +86,7 @@ function createFlower() {
 }
 
 setInterval(createFlower, 220);
+
 
 
 
