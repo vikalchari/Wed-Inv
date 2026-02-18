@@ -5,67 +5,67 @@
   <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
 
+  <!-- Animations -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/lottie-web/build/player/lottie.min.js"></script>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-  
 <body>
 
+<!-- Background Music -->
 <audio autoplay loop>
   <source src="assets/music.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Falling Flowers -->
 <div id="flower-container"></div>
+
+<!-- MAIN CONTAINER (LIMITED WIDTH CONTENT) -->
 <div class="container">
 
+  <section id="home">
 
-  
-<section id="home">
+    <section class="greeting">
+      <h2 id="guestName"></h2>
+    </section>
 
-  
-  
-  <section class="greeting">
-    <h2 id="guestName"></h2>
+    <nav class="navbar">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <section class="photo-full"></section>
   </section>
 
-<nav class="navbar">
-  <a href="index.html" class="active">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="contact.html">CONTACT</a>
-</nav>
+  <section class="invite">
+    <p>Your presence will make our celebration complete.</p>
+    <p>With the blessings of our families</p>
+  </section>
 
-  <section class="photo-full"></section>
-
-</section>
-
-  
-
-  
-<section class="invite">
-  <p>Your presence will make our celebration complete.</p>
-  <p>With the blessings of our families</p>
-</section>
-
-<div class="name-wrapper">
-  <h2 id="groomName">Rahul</h2>
-  <span>&amp;</span>
-  <h2 id="brideName">Priya</h2>
-</div>
+  <div class="name-wrapper">
+    <h2 id="groomName">Rahul</h2>
+    <span>&amp;</span>
+    <h2 id="brideName">Priya</h2>
+  </div>
 
 </div>
+<!-- ✅ END OF CONTAINER -->
 
-  
+<!-- 🌸 FULL WIDTH COUNTDOWN SECTION -->
 <section class="countdown-section">
-  <div class="countdown-card">
-    <div class="countdown-title">
+  <div class="countdown-inner">
+
+    <h2 class="countdown-title">
       🌸 We’re Getting Married In 🌸
-    </div>
+    </h2>
 
     <div class="countdown-inline">
       <div class="time-pill">
@@ -85,25 +85,23 @@
         <label>Seconds</label>
       </div>
     </div>
+
   </div>
 </section>
 
-
-  
+<!-- EVENTS -->
 <section class="events">
   <div class="event">Mehendi</div>
   <div class="event">Wedding</div>
 </section>
 
+<!-- RSVP -->
 <section class="rsvp">
   <a href="https://tally.so" target="_blank">RSVP</a>
 </section>
 
-
-
+<!-- Scripts -->
 <script src="script.js" defer></script>
 
-  
 </body>
 </html>
-
