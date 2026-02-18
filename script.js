@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const flower = document.createElement("div");
     flower.className = "flower";
 
-    const emojis = ["🌸", "🌹","🌺", "🌼", "🌷", "💐"];
+    const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
     flower.innerText = emojis[Math.floor(Math.random() * emojis.length)];
 
     flower.style.left = Math.random() * 100 + "vw";
@@ -52,31 +52,31 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createFlower, 200);
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-  // 🔥 SET YOUR WEDDING DATE HERE
-  // Format: new Date(YEAR, MONTH-1, DAY, HOUR, MINUTE)
+document.addEventListener("DOMContentLoaded", () => {
   const weddingDate = new Date(2027, 1, 14, 10, 0).getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
-    const distance = weddingDate - now;
+    const diff = weddingDate - now;
+    if (diff < 0) return;
 
-    if (distance < 0) return;
+    document.getElementById("days").textContent =
+      Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    document.getElementById("days").innerText =
-      Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").textContent =
+      Math.floor((diff / (1000 * 60 * 60)) % 24);
 
-    document.getElementById("hours").innerText =
-      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("minutes").textContent =
+      Math.floor((diff / (1000 * 60)) % 60);
 
-    document.getElementById("minutes").innerText =
-      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    document.getElementById("seconds").innerText =
-      Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("seconds").textContent =
+      Math.floor((diff / 1000) % 60);
   }
 
-  updateCountdown(); // run once immediately
+  updateCountdown();
   setInterval(updateCountdown, 1000);
 });
