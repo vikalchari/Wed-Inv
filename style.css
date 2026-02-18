@@ -234,10 +234,10 @@ body > *:not(#flower-container) {
 /* FULL WIDTH BAND */
 .countdown-section {
   width: 100vw;
-  margin-top: -20px;
+  margin-top: -40px;
   margin-left: calc(-50vw + 50%);
   background: linear-gradient(180deg, #fff6f0, #fff);
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 /* INNER CONTENT */
