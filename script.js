@@ -15,6 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
     guestEl.style.opacity = "1";
   }
 
+
+  /* ===============================
+   PERSONAL LETTER GUEST NAME
+=============================== */
+const letterGuest = document.getElementById("letterGuest");
+
+if (letterGuest) {
+  letterGuest.textContent = `Dear ${guest},`;
+}
+
+
   gsap.from(".greeting", {
     opacity: 0,
     y: 20,
