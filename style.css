@@ -234,9 +234,10 @@ body > *:not(#flower-container) {
 /* FULL WIDTH BAND */
 .countdown-section {
   width: 100vw;
+  margin-top: -20px;
   margin-left: calc(-50vw + 50%);
   background: linear-gradient(180deg, #fff6f0, #fff);
-  padding: 90px 0;
+  padding: 40px 0;
 }
 
 /* INNER CONTENT */
@@ -319,7 +320,7 @@ body > *:not(#flower-container) {
   align-items: center;
   justify-content: center;
   gap: 35px;
-  margin: 40px 0 30px;
+  margin: 40px 0 10px;
   flex-wrap: nowrap;
 }
 
