@@ -52,24 +52,31 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createFlower, 200);
 });
 
-// SET YOUR WEDDING DATE HERE (YYYY, MM-1, DD, HH, MM)
-const weddingDate = new Date(2027, 2, 14, 10, 0).getTime();
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+  // 🔥 SET YOUR WEDDING DATE HERE
+  // Format: new Date(YEAR, MONTH-1, DAY, HOUR, MINUTE)
+  const weddingDate = new Date(2027, 1, 14, 10, 0).getTime();
 
-  if (distance < 0) return;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  document.getElementById("days").innerText =
-    Math.floor(distance / (1000 * 60 * 60 * 24));
+    if (distance < 0) return;
 
-  document.getElementById("hours").innerText =
-    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("days").innerText =
+      Math.floor(distance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("minutes").innerText =
-    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("hours").innerText =
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-  document.getElementById("seconds").innerText =
-    Math.floor((distance % (1000 * 60)) / 1000);
-}, 1000);
+    document.getElementById("minutes").innerText =
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("seconds").innerText =
+      Math.floor((distance % (1000 * 60)) / 1000);
+  }
+
+  updateCountdown(); // run once immediately
+  setInterval(updateCountdown, 1000);
+});
