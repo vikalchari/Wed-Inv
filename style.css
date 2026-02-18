@@ -211,58 +211,69 @@ html, body {
 }
 
 
+/* FULL WIDTH BACKGROUND BAND */
+.countdown-section {
+  width: 100%;
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #fff6f0, #fff);
+}
+
+/* INNER CARD — NOW WIDE */
 .countdown-card {
-  margin: 50px auto;
-  padding: 25px;
-  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;   /* increase/decrease as you like */
+  padding: 40px 30px;
   background: #fffaf5;
-  border-radius: 22px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
   text-align: center;
 }
 
 .countdown-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #a85040;
   font-weight: 600;
 }
 
 .countdown-inline {
-  display: flex !important;
-  flex-direction: row !important;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 14px;
+  gap: 30px;
 }
 
+/* BIGGER PILLS */
 .time-pill {
-  background: linear-gradient(135deg, #ffe3dc, #fff);
+  background: #ffece6;
   border-radius: 999px;
-  padding: 12px 18px;
-  min-width: 95px;
-  text-align: center;
+  padding: 26px 40px;
+  min-width: 180px;
 }
 
 .time-pill span {
-  display: block;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: bold;
-  color: #4a3a36;
+  display: block;
 }
 
 .time-pill label {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
 /* MOBILE */
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .countdown-inline {
-    gap: 8px;
+    gap: 12px;
   }
+
   .time-pill {
-    min-width: 70px;
-    padding: 10px 12px;
+    padding: 18px 20px;
+    min-width: 90px;
+  }
+
+  .time-pill span {
+    font-size: 1.6rem;
   }
 }
