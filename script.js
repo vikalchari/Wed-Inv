@@ -52,3 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createFlower, 200);
 });
 
+// SET YOUR WEDDING DATE HERE (YYYY, MM-1, DD, HH, MM)
+const weddingDate = new Date(2027, 2, 14, 10, 0).getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  if (distance < 0) return;
+
+  document.getElementById("days").innerText =
+    Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("hours").innerText =
+    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  document.getElementById("minutes").innerText =
+    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("seconds").innerText =
+    Math.floor((distance % (1000 * 60)) / 1000);
+}, 1000);
