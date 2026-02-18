@@ -208,9 +208,12 @@ body > *:not(#flower-container) {
 .flower {
   position: absolute;
   top: -60px;
+
   animation-name: flowerFall;
   animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
+
 
 @keyframes flowerFall {
   from {
