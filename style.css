@@ -369,3 +369,59 @@ body > *:not(#flower-container) {
   position: relative;
   z-index: 2;
 }
+
+
+
+
+
+/* PERSONAL LETTER */
+.letter-section {
+  padding: 60px 20px 40px;
+  background: transparent;
+}
+
+.letter-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffaf3;
+  border-radius: 24px;
+  padding: 50px 45px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  font-family: 'Playfair Display', serif;
+}
+
+.letter-greeting {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #7a2c2c;
+}
+
+.letter-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.letter-signoff {
+  margin-top: 35px;
+  font-size: 1.3rem;
+  font-family: 'Great Vibes', cursive;
+  color: #a85040;
+}
+
+.letter-signoff span {
+  font-size: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .letter-card {
+    padding: 35px 25px;
+  }
+
+  .letter-text {
+    font-size: 1rem;
+  }
+}
