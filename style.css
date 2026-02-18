@@ -174,20 +174,28 @@ html {
   padding: 20px;
   overflow: hidden;
 }
+#flower-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
 
 .flower {
   position: absolute;
-  top: -30px;
-  font-size: 20px;
-  animation: fall linear infinite;
-  opacity: 0.9;
+  top: -40px;
+  font-size: 24px;
+  animation-name: flower-fall;
+  animation-timing-function: linear;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(-30px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(200px) rotate(360deg);
+@keyframes flower-fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
   }
 }
+
