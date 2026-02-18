@@ -51,6 +51,12 @@ gsap.from(".heart", {
   delay: 1.2
 });
 
+gsap.to(".letter-card", {
+  scaleY: 1,
+  duration: 1.8,
+  ease: "power3.out",
+  delay: 0.4
+});
 
 
   
