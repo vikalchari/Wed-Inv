@@ -46,28 +46,36 @@ gsap.from(".heart", {
   /* ===============================
      FLOWER FALL
   =============================== */
-  const flowerContainer = document.getElementById("flower-container");
 
-  function createFlower() {
-    if (!flowerContainer) return;
+const flowerContainer = document.getElementById("flower-container");
+const nameWrapper = document.querySelector(".name-wrapper");
 
-    const flower = document.createElement("div");
-    flower.className = "flower";
+function createFlower() {
+  if (!flowerContainer || !nameWrapper) return;
 
-    const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
-    flower.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+  const flower = document.createElement("div");
+  flower.className = "flower";
 
-    flower.style.left = Math.random() * 100 + "vw";
-    flower.style.fontSize = 16 + Math.random() * 24 + "px";
-    flower.style.opacity = Math.random();
-    flower.style.animationDuration = 6 + Math.random() * 6 + "s";
+  const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
+  flower.innerText = emojis[Math.floor(Math.random() * emojis.length)];
 
-    flowerContainer.appendChild(flower);
+  const stopY = nameWrapper.getBoundingClientRect().top + window.scrollY - 40;
 
-    setTimeout(() => flower.remove(), 12000);
-  }
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.fontSize = 16 + Math.random() * 24 + "px";
+  flower.style.opacity = Math.random();
+  flower.style.animationDuration = 6 + Math.random() * 5 + "s";
 
-  setInterval(createFlower, 220);
+  // 🌸 STOP POINT
+  flower.style.setProperty("--stopY", stopY + "px");
+
+  flowerContainer.appendChild(flower);
+
+  setTimeout(() => flower.remove(), 12000);
+}
+
+setInterval(createFlower, 220);
+
 
 
   /* ===============================
