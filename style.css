@@ -209,3 +209,41 @@ html, body {
     transform: translateY(110vh) rotate(360deg);
   }
 }
+
+
+.countdown {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.countdown h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #a85040;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.timer div {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  min-width: 80px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.timer span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.timer small {
+  font-size: 0.8rem;
+  color: #666;
+}
