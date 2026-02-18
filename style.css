@@ -356,3 +356,9 @@ body > *:not(#flower-container) {
   }
 }
 
+
+
+.name-wrapper {
+  position: relative;
+  z-index: 2;
+}
