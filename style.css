@@ -293,3 +293,42 @@ body > *:not(#flower-container) {
     font-size: 1.7rem;
   }
 }
+
+
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+  flex-wrap: nowrap;
+}
+
+/* Rahul & Priya */
+.name-wrapper h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 72px;        /* BIG names */
+  font-weight: 700;
+  margin: 0;
+  color: #2b2b2b;
+}
+
+/* Ampersand */
+.name-wrapper .amp {
+  font-family: 'Great Vibes', cursive;
+  font-size: 90px;
+  color: #a85040;
+  line-height: 1;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .name-wrapper h2 {
+    font-size: 44px;
+  }
+
+  .name-wrapper .amp {
+    font-size: 60px;
+  }
+}
