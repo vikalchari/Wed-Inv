@@ -211,54 +211,58 @@ html, body {
 }
 
 
-.countdown-box {
+.countdown-card {
   margin: 50px auto;
-  padding: 25px 30px;
-  max-width: 520px;
+  padding: 25px;
+  max-width: 600px;
   background: #fffaf5;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
   text-align: center;
 }
 
-.countdown-box h3 {
+.countdown-title {
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  font-size: 1.4rem;
   color: #a85040;
+  font-weight: 600;
 }
 
-.countdown-row {
-  display: flex;
+.countdown-inline {
+  display: flex !important;
+  flex-direction: row !important;
   justify-content: center;
-  gap: 15px;
+  align-items: center;
+  gap: 14px;
 }
 
-.time-box {
-  background: linear-gradient(135deg, #ffe6e0, #fff);
-  border-radius: 15px;
-  padding: 12px 14px;
-  min-width: 80px;
+.time-pill {
+  background: linear-gradient(135deg, #ffe3dc, #fff);
+  border-radius: 999px;
+  padding: 12px 18px;
+  min-width: 95px;
+  text-align: center;
 }
 
-.time-box span {
+.time-pill span {
+  display: block;
   font-size: 1.8rem;
   font-weight: bold;
-  display: block;
   color: #4a3a36;
 }
 
-.time-box small {
+.time-pill label {
   font-size: 0.75rem;
   color: #777;
 }
 
-/* Mobile fix */
-@media (max-width: 480px) {
-  .countdown-row {
+/* MOBILE */
+@media (max-width: 520px) {
+  .countdown-inline {
     gap: 8px;
   }
-  .time-box {
-    min-width: 65px;
-    padding: 10px;
+  .time-pill {
+    min-width: 70px;
+    padding: 10px 12px;
   }
 }
