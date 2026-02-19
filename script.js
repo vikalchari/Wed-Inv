@@ -161,12 +161,8 @@ setInterval(createFlower, 220);
 /* ===============================
    PERSONAL LETTER Envelope
 =============================== */
-const envelope = document.getElementById("openLetter");
+const letter = document.getElementById("openLetter");
+letter.addEventListener("click", () => {
+  letter.classList.add("open");
+});
 
-if (envelope) {
-  envelope.addEventListener("click", () => {
-    envelope.classList.add("open");
-  });
-}
-
- 
