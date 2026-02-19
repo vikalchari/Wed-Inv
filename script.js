@@ -73,6 +73,10 @@ gsap.from(".heart", {
      FLOWER FALL
   =============================== */
 
+/* ===============================
+   FLOWER FALL (STOP ABOVE LETTER)
+=============================== */
+
 const flowerContainer = document.getElementById("flower-container");
 const letterCard = document.querySelector(".letter-card");
 
@@ -86,18 +90,18 @@ function createFlower() {
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
   const letterTop =
-    letterCard.getBoundingClientRect().top + window.scrollY - 40;
+    letterCard.getBoundingClientRect().top + window.scrollY - 30;
 
   flower.style.left = Math.random() * window.innerWidth + "px";
   flower.style.fontSize = 18 + Math.random() * 22 + "px";
-  flower.style.opacity = Math.random();
-  flower.style.animationDuration = 6 + Math.random() * 5 + "s";
+  flower.style.pointerEvents = "none";
 
-  // 🔥 FORCE MOVEMENT
+  flowerContainer.appendChild(flower);
+
   flower.animate(
     [
-      { transform: "translateY(0) rotate(0deg)", opacity: 1 },
-      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
+      { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
+      { transform: `translateY(${letterTop}px) rotate(360deg)`, opacity: 0 }
     ],
     {
       duration: (6 + Math.random() * 5) * 1000,
@@ -105,10 +109,6 @@ function createFlower() {
       fill: "forwards"
     }
   );
-
-  // 🔥 IMPORTANT: Set stopping point
-  flower.style.setProperty("--stopY", `${letterTop}px`);
-  flowerContainer.appendChild(flower);
 
   setTimeout(() => flower.remove(), 12000);
 }
