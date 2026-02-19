@@ -76,6 +76,7 @@ gsap.from(".heart", {
    FLOWER FALL — STOP BEFORE LETTER
 =============================== */
 
+
 const flowerContainer = document.getElementById("flower-container");
 const letterCard = document.querySelector(".letter-card");
 
@@ -85,18 +86,17 @@ function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
 
-  const emojis = ["🌸","🌹","🌺", "🌼", "🌷", "💐"];
+  const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  // 🔑 ABSOLUTE STOP POSITION
-  const letterTop =
-    letterCard.getBoundingClientRect().top + window.scrollY;
+  // Get absolute position of the letter card from top of document
+  const letterY = letterCard.getBoundingClientRect().top + window.scrollY;
 
-  // Convert to viewport space
-  const stopY = letterTop - window.scrollY - 30;
+  // Now convert that into viewport-relative coordinate for a fixed container
+  const stopY = Math.max(letterY - window.scrollY - 30, 0);
 
   flower.style.left = Math.random() * window.innerWidth + "px";
-  flower.style.fontSize = 18 + Math.random() * 22 + "px";
+  flower.style.fontSize = 14 + Math.random() * 24 + "px";
   flower.style.opacity = Math.random();
 
   flowerContainer.appendChild(flower);
@@ -104,7 +104,7 @@ function createFlower() {
   flower.animate(
     [
       { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
-      { transform: `translateY(${stopY}px) rotate(0deg)`, opacity: 0 }
+      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
     ],
     {
       duration: 6000 + Math.random() * 4000,
@@ -117,7 +117,6 @@ function createFlower() {
 }
 
 setInterval(createFlower, 240);
-
 
 
 
