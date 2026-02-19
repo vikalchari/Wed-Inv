@@ -372,97 +372,92 @@ body > *:not(#flower-container) {
 
 
 /* LETTER SECTION */
-/* LETTER SECTION */
+/* PERSONAL LETTER */
 .letter-section {
-  padding: 120px 20px;
-  background: #fbf7f2;
-}
-
-/* ENVELOPE */
-.envelope {
-  position: relative;
-  width: 90%;
-  max-width: 900px;
-  height: 460px;
-  margin: 80px auto;
-  background: #f6ecd9;
-  border-radius: 26px;
-  overflow: hidden; /* 🔥 CRITICAL */
-  cursor: pointer;
+  padding: 60px 20px 40px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
+/*Letter*/
 
-/* TAP TO OPEN */
-.tap-hint {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-  font-family: "Cinzel", serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #7a3e2e;
-  z-index: 5;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-
-
-/* FLAP */
-.envelope-flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: #e8d3b3;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top;
-  transition: transform 0.8s ease;
-  z-index: 4;
-}
-
-
-/* LETTER (HIDDEN INITIALLY) */
 .letter-card {
   position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f8efe0;
-  padding: 70px 60px;
-  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffaf3;
+  border-radius: 24px;
+  padding: 50px 45px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  font-family: 'Playfair Display', serif;
+  /*font-family: 'Allura', cursive;*/
+  letter-spacing: 0.6px;
+  transition: bottom 1.2s ease;
   z-index: 2;
-  transition: bottom 1s ease;
-}
-
-
-
-/* OPEN STATE */
-.envelope.open .envelope-flap {
-  transform: rotateX(180deg);
-}
-
-.envelope.open .letter-card {
-  bottom: 0;
-}
-
-.envelope.open .tap-hint {
-  opacity: 0;
-}
-
-
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .envelope {
-    height: 560px;
-  }
 
   .letter-card {
-    padding: 45px 25px;
+  background: radial-gradient(
+    circle at top,
+    #fffdf6,
+    #fff6e8
+  );
+  box-shadow:
+    0 0 60px rgba(255, 214, 170, 0.45),
+    0 20px 50px rgba(0,0,0,0.08);
+}
+}
+
+  .letter-card {
+  transform-origin: top;
+}
+
+
+.letter-greeting {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #7a2c2c;
+}
+
+.letter-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.letter-signoff {
+  margin-top: 35px;
+  font-size: 1.3rem;
+  font-family: 'Great Vibes', cursive;
+  color: #a85040;
+}
+
+.letter-signoff span {
+  font-size: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .letter-card {
+    padding: 35px 25px;
+  }
+
+  .letter-text {
+    font-size: 1rem;
   }
 }
+
+
+.letter-blessing {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 30px 0;
+  color: #9c6b2f;
+}
+
+
+
