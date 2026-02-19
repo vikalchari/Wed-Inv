@@ -104,7 +104,7 @@ function createFlower() {
   flower.animate(
     [
       { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
-      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
+      { transform: `translateY(${stopY}px) rotate(0deg)`, opacity: 0 }
     ],
     {
       duration: 6000 + Math.random() * 4000,
