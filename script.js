@@ -51,12 +51,19 @@ gsap.from(".heart", {
   delay: 1.2
 });
 
-gsap.to(".letter-card", {
-  scaleY: 1,
-  duration: 1.8,
-  ease: "power3.out",
-  delay: 0.4
-});
+/* -------------------------
+     LETTER UNFOLD ANIMATION
+  -------------------------- */
+  gsap.fromTo(".letter-card",
+    { scaleY: 0, opacity: 0 },
+    {
+      scaleY: 1,
+      opacity: 1,
+      duration: 1.8,
+      ease: "power3.out",
+      delay: 0.3
+    }
+  );
 
 
   
