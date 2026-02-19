@@ -517,7 +517,25 @@ body > *:not(#flower-container) {
 
 /* HINT */
 .tap-hint {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #777;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-family: 'Cinzel', serif;
+  color: #7a2c2c;
+  letter-spacing: 1px;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.85;
 }
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.tap-hint {
+  animation: hintPulse 1.6s infinite;
+}
+
