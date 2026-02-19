@@ -380,6 +380,41 @@ body > *:not(#flower-container) {
   background: transparent;
 }
 
+/* ENVELOPE */
+.envelope {
+  position: relative;
+  width: 360px;
+  height: 240px;
+  background: #f5e6d3;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* BACK */
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #f5e6d3;
+  z-index: 1;
+}
+
+/* FLAP */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background: #e6cfae;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 3;
+}
+
+
+
 .letter-card {
   max-width: 900px;
   margin: 0 auto;
@@ -405,6 +440,16 @@ body > *:not(#flower-container) {
 
   .letter-card {
   transform-origin: top;
+}
+
+
+/* OPEN STATE */
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .letter-card {
+  bottom: 10px;
 }
 
 
@@ -451,4 +496,12 @@ body > *:not(#flower-container) {
   font-size: 1.2rem;
   margin: 30px 0;
   color: #9c6b2f;
+}
+
+
+/* HINT */
+.tap-hint {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #777;
 }
