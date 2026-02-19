@@ -156,3 +156,19 @@ setInterval(createFlower, 220);
   setInterval(updateCountdown, 1000);
 
 });
+
+
+const envelope = document.getElementById("envelope");
+const tapHint = document.getElementById("tapHint");
+
+if (envelope) {
+  envelope.addEventListener("click", () => {
+    if (envelope.classList.contains("open")) return;
+
+    envelope.classList.add("open");
+
+    if (tapHint) {
+      tapHint.style.display = "none";
+    }
+  });
+}
