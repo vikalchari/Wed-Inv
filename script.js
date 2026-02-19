@@ -38,7 +38,7 @@ if (letterGuest) {
     
   });
 
-gsap.from(".name-wrapper h2", {
+/*gsap.from(".name-wrapper h2", {
   opacity: 0,
   scale: 0.8,
   duration: 1.8,
@@ -53,7 +53,7 @@ gsap.from(".heart", {
   duration: 1,
   ease: "back.out(1.7)",
   delay: 1.2
-});
+});*/
 
 
   gsap.fromTo(".letter-card",
