@@ -69,13 +69,11 @@ gsap.from(".heart", {
 
 
   
-  /* ===============================
-     FLOWER FALL
-  =============================== */
 
 /* ===============================
    FLOWER FALL (STOP ABOVE LETTER)
 =============================== */
+
 
 const flowerContainer = document.getElementById("flower-container");
 const letterCard = document.querySelector(".letter-card");
@@ -89,19 +87,24 @@ function createFlower() {
   const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  const letterTop =
-    letterCard.getBoundingClientRect().top + window.scrollY - 30;
+  const containerRect = flowerContainer.getBoundingClientRect();
+  const letterRect = letterCard.getBoundingClientRect();
+
+  // 🔥 THIS IS THE KEY LINE
+  const stopY = letterRect.top - containerRect.top - 20;
 
   flower.style.left = Math.random() * window.innerWidth + "px";
   flower.style.fontSize = 18 + Math.random() * 22 + "px";
+  flower.style.position = "absolute";
+  flower.style.top = "-40px";
   flower.style.pointerEvents = "none";
 
   flowerContainer.appendChild(flower);
 
   flower.animate(
     [
-      { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
-      { transform: `translateY(${letterTop}px) rotate(360deg)`, opacity: 0 }
+      { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
     ],
     {
       duration: (6 + Math.random() * 5) * 1000,
@@ -114,6 +117,7 @@ function createFlower() {
 }
 
 setInterval(createFlower, 220);
+
 
 
 
