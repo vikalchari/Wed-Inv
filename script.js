@@ -85,7 +85,7 @@ function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
 
-  const emojis = ["🌸", "🌺", "🌼", "🌷", "💐"];
+  const emojis = ["🌸","🌹","🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
   // 🔑 ABSOLUTE STOP POSITION
