@@ -386,8 +386,8 @@ body > *:not(#flower-container) {
 /* ENVELOPE */
 .envelope {
   position: relative;
-  width: 520px;          /* 🔥 bigger */
-  height: 340px;         /* 🔥 taller */
+  width: 1000px;          /* 🔥 bigger */
+  height: 800px;         /* 🔥 taller */
   background: #f5e6d3;
   border-radius: 16px;
   cursor: pointer;
@@ -412,6 +412,13 @@ body > *:not(#flower-container) {
 }
 
 /* FLAP */
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+
+
 .envelope-flap {
   position: absolute;
   top: 0;
@@ -539,3 +546,7 @@ body > *:not(#flower-container) {
   animation: hintPulse 1.6s infinite;
 }
 
+.envelope.open .tap-hint {
+  opacity: 0;
+  transform: translate(-50%, -10px);
+}
