@@ -386,14 +386,22 @@ body > *:not(#flower-container) {
 /* ENVELOPE */
 .envelope {
   position: relative;
-  width: 360px;
-  height: 240px;
+  width: 520px;          /* 🔥 bigger */
+  height: 340px;         /* 🔥 taller */
   background: #f5e6d3;
-  border-radius: 12px;
+  border-radius: 16px;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
 }
+
+@media (max-width: 768px) {
+  .envelope {
+    width: 92vw;
+    height: 300px;
+  }
+}
+
 
 /* BACK */
 .envelope-back {
@@ -408,13 +416,14 @@ body > *:not(#flower-container) {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 60%;
+  height: 65%;
   background: #e6cfae;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top;
   transition: transform 1s ease;
-  z-index: 3;
+  z-index: 4;
 }
+
 
 
 /*Letter*/
