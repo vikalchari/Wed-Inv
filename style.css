@@ -382,31 +382,32 @@ body > *:not(#flower-container) {
 .envelope {
   position: relative;
   width: 90%;
-  max-width: 820px;
-  height: 420px;
-  margin: auto;
+  max-width: 900px;
+  height: 460px;
+  margin: 80px auto;
   background: #f6ecd9;
-  border-radius: 24px;
-  overflow: hidden; /* 🔥 THIS HIDES LETTER */
+  border-radius: 26px;
+  overflow: hidden; /* 🔥 CRITICAL */
   cursor: pointer;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
+
 
 
 /* TAP TO OPEN */
 .tap-hint {
   position: absolute;
-  top: 22px;
+  top: 20px;
   width: 100%;
   text-align: center;
   font-family: "Cinzel", serif;
-  letter-spacing: 2px;
   font-size: 14px;
+  letter-spacing: 2px;
   color: #7a3e2e;
   z-index: 5;
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
+
 
 
 /* FLAP */
@@ -418,9 +419,9 @@ body > *:not(#flower-container) {
   height: 60%;
   background: #e8d3b3;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  z-index: 4;
   transform-origin: top;
   transition: transform 0.8s ease;
+  z-index: 4;
 }
 
 
@@ -432,11 +433,12 @@ body > *:not(#flower-container) {
   width: 100%;
   height: 100%;
   background: #f8efe0;
-  padding: 60px 50px;
+  padding: 70px 60px;
   text-align: center;
   z-index: 2;
   transition: bottom 1s ease;
 }
+
 
 
 /* OPEN STATE */
@@ -450,8 +452,9 @@ body > *:not(#flower-container) {
 
 .envelope.open .tap-hint {
   opacity: 0;
-  pointer-events: none;
 }
+
+
 
 /* MOBILE */
 @media (max-width: 768px) {
