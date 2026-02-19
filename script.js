@@ -74,35 +74,36 @@ gsap.from(".heart", {
    FLOWER FALL (STOP ABOVE LETTER)
 =============================== */
 
-
 const flowerContainer = document.getElementById("flower-container");
 const letterSection = document.querySelector(".letter-section");
 
-function createFlower() {
+function emitFlower() {
   if (!flowerContainer || !letterSection) return;
 
   const flower = document.createElement("div");
   flower.className = "flower";
+
   const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  // get letter section top relative to viewport
   const letterRect = letterSection.getBoundingClientRect();
-  const stopPx = letterRect.top - 20; // stop a little above
 
-  flower.style.left = Math.random() * 100 + "vw";
-  flower.style.fontSize = 18 + Math.random() * 22 + "px";
+  // stop position relative to view
+  const stopY = Math.max(letterRect.top - 50, 0);
+
+  flower.style.left = Math.random() * window.innerWidth + "px";
+  flower.style.fontSize = 18 + Math.random() * 24 + "px";
   flower.style.opacity = Math.random();
 
   flowerContainer.appendChild(flower);
 
   flower.animate(
     [
-      { transform: "translateY(0) rotate(0deg)", opacity: 1 },
-      { transform: `translateY(${stopPx}px) rotate(360deg)`, opacity: 0 }
+      { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
+      { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
     ],
     {
-      duration: 7000 + Math.random() * 3000,
+      duration: 6000 + Math.random() * 4000,
       easing: "linear",
       fill: "forwards"
     }
@@ -111,7 +112,11 @@ function createFlower() {
   setTimeout(() => flower.remove(), 12000);
 }
 
-setInterval(createFlower, 220);
+setInterval(emitFlower, 220);
+
+
+
+  
 
 
 
