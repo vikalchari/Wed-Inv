@@ -378,6 +378,9 @@ body > *:not(#flower-container) {
 .letter-section {
   padding: 60px 20px 40px;
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ENVELOPE */
@@ -414,8 +417,10 @@ body > *:not(#flower-container) {
 }
 
 
+/*Letter*/
 
 .letter-card {
+  position: absolute;
   max-width: 900px;
   margin: 0 auto;
   background: #fffaf3;
@@ -425,6 +430,8 @@ body > *:not(#flower-container) {
   font-family: 'Playfair Display', serif;
   /*font-family: 'Allura', cursive;*/
   letter-spacing: 0.6px;
+  transition: bottom 1.2s ease;
+  z-index: 2;
 
   .letter-card {
   background: radial-gradient(
