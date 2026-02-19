@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+/* ===============================
+   PERSONAL LETTER Envelope
+=============================== */
+  const envelope = document.getElementById("openLetter");
+
+if (envelope) {
+  envelope.addEventListener("click", () => {
+    envelope.classList.toggle("open");
+  });
+}
+
+
+
+  
+
   /* ===============================
    PERSONAL LETTER GUEST NAME
 =============================== */
