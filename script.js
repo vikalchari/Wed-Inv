@@ -163,7 +163,6 @@ setInterval(createFlower, 220);
      Envelope
   =============================== */
 const envelope = document.getElementById("envelope");
-const tapOpen = document.getElementById("tapOpen");
 
 if (envelope) {
   envelope.addEventListener("click", () => {
