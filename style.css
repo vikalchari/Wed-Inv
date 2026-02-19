@@ -386,8 +386,8 @@ body > *:not(#flower-container) {
 /* ENVELOPE */
 .envelope {
   position: relative;
-  width: 1000px;          /* 🔥 bigger */
-  height: 800px;         /* 🔥 taller */
+  width: 800px;          /* 🔥 bigger */
+  height: 500px;         /* 🔥 taller */
   background: #f5e6d3;
   border-radius: 16px;
   cursor: pointer;
