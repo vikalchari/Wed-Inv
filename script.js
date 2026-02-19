@@ -74,10 +74,10 @@ gsap.from(".heart", {
   =============================== */
 
 const flowerContainer = document.getElementById("flower-container");
-const nameWrapper = document.querySelector(".name-wrapper");
+const letterCard = document.querySelector(".letter-card");
 
 function createFlower() {
-  if (!flowerContainer || !nameWrapper) return;
+  if (!flowerContainer || !letterCard) return;
 
   const flower = document.createElement("div");
   flower.className = "flower";
@@ -85,8 +85,8 @@ function createFlower() {
   const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  const stopY =
-    nameWrapper.getBoundingClientRect().top + window.scrollY - 40;
+  const letterTop =
+    letterCard.getBoundingClientRect().top + window.scrollY - 40;
 
   flower.style.left = Math.random() * window.innerWidth + "px";
   flower.style.fontSize = 18 + Math.random() * 22 + "px";
@@ -106,6 +106,8 @@ function createFlower() {
     }
   );
 
+  // 🔥 IMPORTANT: Set stopping point
+  flower.style.setProperty("--stopY", `${letterTop}px`);
   flowerContainer.appendChild(flower);
 
   setTimeout(() => flower.remove(), 12000);
