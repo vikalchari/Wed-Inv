@@ -74,11 +74,17 @@ gsap.from(".heart", {
    FLOWER FALL (STOP ABOVE LETTER)
 =============================== */
 
-const flowerContainer = document.getElementById("flower-container");
-const letterSection = document.querySelector(".letter-section");
 
-function emitFlower() {
-  if (!flowerContainer || !letterSection) return;
+
+/* ===============================
+   FLOWER FALL — STOP ABOVE LETTER
+=============================== */
+
+  const flowerContainer = document.getElementById("flower-container");
+const letterCard = document.querySelector(".letter-card");
+
+function createFlower() {
+  if (!flowerContainer || !letterCard) return;
 
   const flower = document.createElement("div");
   flower.className = "flower";
@@ -86,13 +92,12 @@ function emitFlower() {
   const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  const letterRect = letterSection.getBoundingClientRect();
+  // 🔥 Correct stop position (viewport-based)
+  const letterRect = letterCard.getBoundingClientRect();
+  const stopY = Math.max(letterRect.top - 20, 0);
 
-  // stop position relative to view
-  const stopY = Math.max(letterRect.top - 50, 0);
-
-  flower.style.left = Math.random() * window.innerWidth + "px";
-  flower.style.fontSize = 18 + Math.random() * 24 + "px";
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.fontSize = 14 + Math.random() * 22 + "px";
   flower.style.opacity = Math.random();
 
   flowerContainer.appendChild(flower);
@@ -112,8 +117,7 @@ function emitFlower() {
   setTimeout(() => flower.remove(), 12000);
 }
 
-setInterval(emitFlower, 220);
-
+setInterval(createFlower, 220);
 
 
   
