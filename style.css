@@ -209,7 +209,8 @@ body > *:not(#flower-container) {
 .flower {
   position: absolute;
   top: -60px;
-  will-change: transform;
+  pointer-events: none;
+
 }
 
 
