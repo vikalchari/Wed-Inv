@@ -405,7 +405,6 @@ body > *:not(#flower-container) {
 
   .letter-card {
   transform-origin: top;
-  transform: scaleY(0);
 }
 
 
