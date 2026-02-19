@@ -66,7 +66,7 @@ gsap.from(".heart", {
   delay: 1.2
 });
 
-/* -------------------------
+-------------------------
      LETTER UNFOLD ANIMATION
   -------------------------- 
   gsap.fromTo(".letter-card",
@@ -78,7 +78,7 @@ gsap.from(".heart", {
       ease: "power3.out",
       delay: 0.3
     }
-  );*/
+  );
 
 
   
@@ -158,11 +158,4 @@ setInterval(createFlower, 220);
 });
 
 
-/* ===============================
-   PERSONAL LETTER Envelope
-=============================== */
-const letter = document.getElementById("openLetter");
-letter.addEventListener("click", () => {
-  letter.classList.add("open");
-});
 
