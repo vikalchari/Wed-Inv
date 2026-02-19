@@ -158,17 +158,15 @@ setInterval(createFlower, 220);
 });
 
 
+
+  /* ===============================
+     Envelope
+  =============================== */
 const envelope = document.getElementById("envelope");
-const tapHint = document.getElementById("tapHint");
+const tapOpen = document.getElementById("tapOpen");
 
 if (envelope) {
   envelope.addEventListener("click", () => {
-    if (envelope.classList.contains("open")) return;
-
     envelope.classList.add("open");
-
-    if (tapHint) {
-      tapHint.style.display = "none";
-    }
   });
 }
