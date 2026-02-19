@@ -374,26 +374,15 @@ body > *:not(#flower-container) {
 
 
 /* LETTER SECTION */
-/* PERSONAL LETTER */
+
 .letter-section {
   padding: 60px 20px 40px;
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  z-index: 5;
-  margin-bottom: 80px;
 }
 
-
-
-.letter-wrapper {
-  overflow: visible;
-}
-
-
-/*Letter*/
 
 .letter-card {
   position: absolute;
@@ -426,6 +415,7 @@ body > *:not(#flower-container) {
 }
 
 
+
 .letter-greeting {
   font-size: 1.4rem;
   font-weight: 600;
@@ -451,11 +441,6 @@ body > *:not(#flower-container) {
   font-size: 2rem;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .letter-card {
-    padding: 35px 25px;
-  }
 
   .letter-text {
     font-size: 1rem;
@@ -471,4 +456,9 @@ body > *:not(#flower-container) {
 }
 
 
+/* Mobile */
+@media (max-width: 768px) {
+  .letter-card {
+    padding: 35px 25px;
+  }
 
