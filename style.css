@@ -206,8 +206,15 @@ body > *:not(#flower-container) {
   z-index: 9999;
 }
 
-
 .flower {
+  position: absolute;
+  top: -60px;
+  will-change: transform;
+}
+
+
+
+/*.flower {
   position: absolute;
   top: -60px;
 
@@ -227,7 +234,7 @@ body > *:not(#flower-container) {
     opacity: 0;
   }
 }
-
+*/
 
 
 
