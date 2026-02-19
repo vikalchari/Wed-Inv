@@ -16,17 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-/* ===============================
-   PERSONAL LETTER Envelope
-=============================== */
-  const envelope = document.getElementById("openLetter");
-
-if (envelope) {
-  envelope.addEventListener("click", () => {
-    envelope.classList.toggle("open");
-  });
-}
-
 
 
   
@@ -66,9 +55,7 @@ gsap.from(".heart", {
   delay: 1.2
 });
 
--------------------------
-     LETTER UNFOLD ANIMATION
-  -------------------------- 
+
   gsap.fromTo(".letter-card",
     { scaleY: 0, opacity: 0 },
     {
@@ -95,7 +82,7 @@ function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
 
-  const emojis = ["🌸", "🌺", "🌼", "🌷", "💐"];
+  const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
   const stopY =
