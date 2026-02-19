@@ -372,6 +372,7 @@ body > *:not(#flower-container) {
 
 
 /* LETTER SECTION */
+/* LETTER SECTION */
 .letter-section {
   padding: 120px 20px;
   background: #fbf7f2;
@@ -380,27 +381,27 @@ body > *:not(#flower-container) {
 /* ENVELOPE */
 .envelope {
   position: relative;
-  max-width: 720px;
-  height: 420px;
+  max-width: 760px;
+  height: 440px;
   margin: 0 auto;
-  background: #f2e4cf;
-  border-radius: 22px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
-  overflow: hidden;
+  background: #f3e6d2;
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+  overflow: hidden; /* 🔥 IMPORTANT */
   cursor: pointer;
 }
 
 /* TAP TO OPEN */
 .tap-open {
   position: absolute;
-  top: 22px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Cinzel', serif;
   font-size: 16px;
   letter-spacing: 1px;
   color: #7a2c2c;
-  z-index: 5;
+  z-index: 6;
   transition: opacity 0.4s ease;
 }
 
@@ -411,76 +412,18 @@ body > *:not(#flower-container) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ead6b8;
-  clip-path: polygon(0 0, 100% 0, 50% 60%);
-  transform-origin: top;
+  background: #ead4b5;
+  clip-path: polygon(0 0, 100% 0, 50% 65%);
+  transform-origin: top center;
   transition: transform 1s ease;
-  z-index: 4;
+  z-index: 5;
 }
 
-/* LETTER */
+/* LETTER (HIDDEN INSIDE) */
 .letter {
   position: absolute;
   bottom: -100%;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fffaf2;
-  padding: 70px 60px;
-  box-sizing: border-box;
-  text-align: center;
-  transition: bottom 1.2s ease;
-  z-index: 3;
-}
-
-/* TEXT STYLES */
-.letter p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-.letter .sanskrit {
-  margin-top: 25px;
-  font-size: 18px;
-  color: #a36a2c;
-}
-
-.signature {
-  margin-top: 35px;
-  font-family: 'Great Vibes', cursive;
-  font-size: 34px;
-  color: #a85040;
-}
-
-/* OPEN STATE */
-.envelope.open .envelope-flap {
-  transform: rotateX(180deg);
-}
-
-.envelope.open .letter {
-  bottom: 0;
-}
-
-.envelope.open .tap-open {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .envelope {
-    height: 460px;
-  }
-
-  .letter {
-    padding: 50px 30px;
-  }
-
-  .letter p {
-    font-size: 16px;
-  }
-}
 
 
 
