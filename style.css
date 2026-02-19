@@ -317,17 +317,17 @@ body > *:not(#flower-container) {
 
 /* ROYAL NAME SECTION */
 
-.name-wrapper {
+/*.name-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 35px;
   margin: 40px 0 10px;
   flex-wrap: nowrap;
-}
+}*/
 
 /* GOLD GRADIENT TEXT */
-.name-wrapper h2 {
+/*.name-wrapper h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 84px;
   margin: 0;
@@ -339,23 +339,23 @@ body > *:not(#flower-container) {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+}*/
 
 /* HEART */
-.name-wrapper .heart {
+/*.name-wrapper .heart {
   font-size: 54px;
   color: #b23a48;
   animation: heartbeat 1.6s infinite;
-}
+}*/
 
 /* HEART BEAT */
-@keyframes heartbeat {
+/*@keyframes heartbeat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.15); }
-}
+}*/
 
 /* MOBILE */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .name-wrapper h2 {
     font-size: 52px;
   }
@@ -370,7 +370,7 @@ body > *:not(#flower-container) {
 .name-wrapper {
   position: relative;
   z-index: 2;
-}
+}*/
 
 
 /* LETTER SECTION */
