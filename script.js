@@ -93,7 +93,7 @@ function createFlower() {
   const letterY = letterCard.getBoundingClientRect().top + window.scrollY;
 
   // Now convert that into viewport-relative coordinate for a fixed container
-  const stopY = Math.max(letterY - window.scrollY - 30, 0);
+  const stopY = Math.max(letterY - window.scrollY - 80, 0);
 
   flower.style.left = Math.random() * window.innerWidth + "px";
   flower.style.fontSize = 14 + Math.random() * 24 + "px";
