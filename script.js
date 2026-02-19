@@ -75,13 +75,11 @@ gsap.from(".heart", {
 =============================== */
 
 
-
-/* ===============================
-   FLOWER FALL — STOP ABOVE LETTER
-=============================== */
-
-  const flowerContainer = document.getElementById("flower-container");
+const flowerContainer = document.getElementById("flower-container");
 const letterCard = document.querySelector(".letter-card");
+
+// Create an offscreen container that matches the viewport height
+flowerContainer.style.height = window.innerHeight + "px";
 
 function createFlower() {
   if (!flowerContainer || !letterCard) return;
@@ -92,9 +90,9 @@ function createFlower() {
   const emojis = ["🌸", "🌹", "🌺", "🌼", "🌷", "💐"];
   flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-  // 🔥 Correct stop position (viewport-based)
+  // Compute stop position relative to viewport
   const letterRect = letterCard.getBoundingClientRect();
-  const stopY = Math.max(letterRect.top - 20, 0);
+  const stopY = Math.max(letterRect.top - 30, 0);
 
   flower.style.left = Math.random() * 100 + "vw";
   flower.style.fontSize = 14 + Math.random() * 22 + "px";
@@ -104,7 +102,7 @@ function createFlower() {
 
   flower.animate(
     [
-      { transform: "translateY(-60px) rotate(0deg)", opacity: 1 },
+      { transform: "translateY(0px) rotate(0deg)", opacity: 1 },
       { transform: `translateY(${stopY}px) rotate(360deg)`, opacity: 0 }
     ],
     {
@@ -117,7 +115,10 @@ function createFlower() {
   setTimeout(() => flower.remove(), 12000);
 }
 
-setInterval(createFlower, 220);
+setInterval(createFlower, 200);
+
+
+  
 
 
   
