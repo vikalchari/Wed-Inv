@@ -85,15 +85,15 @@ body > *:not(#flower-container) {
   color: #5a0f1b;
 }*/
 
-/*.greeting {
+.greeting {
   background: #fbf7f2;   /* solid light background */
   padding: 24px 0;
-}*/
+}
 
 .greeting h2 {
   font-family: 'Georgia', serif;
   font-size: 48px;
-  color: #a85040;   /* soft wedding red */
+  color: #5a0f1b;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
