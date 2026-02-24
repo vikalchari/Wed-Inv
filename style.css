@@ -591,6 +591,11 @@ body > *:not(#flower-container) {
   .navbar {
     margin-bottom: 8px;
   }
+
+ .countdown-title {
+    letter-spacing: 0.5px;
+  }
+  
 }
 
 
