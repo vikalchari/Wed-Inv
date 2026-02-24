@@ -141,19 +141,24 @@ body > *:not(#flower-container) {
    VIDEO HERO – AUTO FIT
    ========================= */
 
+/* VIDEO HERO — visible area with full video inside */
 .video-hero {
   position: relative;
   width: 100%;
-  height: 90vh;        /* hero height */
-  background: #000;   /* bars if needed */
+  height: 90vh;            /* hero height */
+  max-height: 90vh;        /* ensures it won’t grow taller */
+  background: #000;       /* black bars if needed */
   overflow: hidden;
+  z-index: 1;
 }
 
-/* VIDEO ITSELF */
+/* Actual video styling */
 .video-hero video {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ✅ NO CROPPING */
+  object-fit: contain;     /* 🔥 IMPORTANT: SHOW FULL VIDEO, NO CROPPING */
+  object-position: center;
+  display: block;
 }
 
 /* optional dark overlay */
