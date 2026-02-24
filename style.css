@@ -87,7 +87,6 @@ body > *:not(#flower-container) {
 
 .greeting {
   background: #fbf7f2;   /* solid light background */
-  padding: 24px 0;
 }
 
 .greeting h2 {
