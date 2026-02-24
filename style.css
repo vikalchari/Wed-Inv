@@ -79,10 +79,19 @@ body > *:not(#flower-container) {
   font-size: 64px;
 }
 
-.greeting h2 {
+/*.greeting h2 {
   font-family: 'Georgia', serif;
   font-size: 48px;
   color: #5a0f1b;
+}*/
+
+.greeting {
+  background: rgba(251, 247, 242, 0.95);
+  padding: 24px 0;
+}
+
+.greeting h2 {
+  color: #a85040;
 }
 
 .invite .names {
