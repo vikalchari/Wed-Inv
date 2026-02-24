@@ -428,8 +428,8 @@ body > *:not(#flower-container) {
   max-width: 1200px;
   margin: 0 auto;
   background: #fffaf5;
-  border-radius: 40px;
-  padding: 60px 50px;
+  border-radius: 32px;
+  padding: 40px 35px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.12);
   text-align: center;
 }
@@ -445,13 +445,13 @@ body > *:not(#flower-container) {
 .where-when-box {
   background: #fff;
   border-radius: 30px;
-  padding: 45px 40px;
+  padding: 30px 32px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
 }
 
 /* TEXT BLOCKS */
@@ -477,7 +477,7 @@ body > *:not(#flower-container) {
 /* DIVIDER LINE */
 .divider {
   width: 1px;
-  height: 120px;
+  height: 150px;
   background: linear-gradient(
     to bottom,
     transparent,
@@ -486,18 +486,34 @@ body > *:not(#flower-container) {
   );
 }
 
-/* MAP BUTTON */
+
+/* MAP BUTTON — LIGHT, CLEAN, CLEAR */
 .map-btn {
   display: inline-block;
-  margin-top: 18px;
-  padding: 14px 26px;
+  margin-top: 16px;
+  padding: 10px 22px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #b88a2d, #f7d774, #b88a2d);
-  color: #5a0f1b;
-  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    #f9eecb,
+    #fdf6e3,
+    #f3e2a3
+  );
+
+  color: #6a3b1f;              /* softer brown-gold text */
+  font-weight: 500;
+  font-size: 0.95rem;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(184,138,45,0.45);
+
+  box-shadow:
+    0 4px 10px rgba(184, 138, 45, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  transition: all 0.25s ease;
 }
+
+
 
 /* =========================
    MOBILE FRIENDLY
