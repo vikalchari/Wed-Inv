@@ -412,6 +412,131 @@ body > *:not(#flower-container) {
 }
 
 
+/* =========================
+   WHERE & WHEN — MATCH COUNTDOWN
+   ========================= */
+
+
+.where-when-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(180deg, #fff6f0, #fff);
+  padding: 40px 0 60px;
+}
+
+.where-when-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fffaf5;
+  border-radius: 40px;
+  padding: 60px 50px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.where-when-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #a85040;
+  margin-bottom: 40px;
+}
+
+/* SINGLE CARD */
+.where-when-box {
+  background: #fff;
+  border-radius: 30px;
+  padding: 45px 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* TEXT BLOCKS */
+.when-block,
+.where-block {
+  flex: 1;
+}
+
+.when-block h4,
+.where-block h4 {
+  font-family: 'Cinzel', serif;
+  color: #7a2c2c;
+  margin-bottom: 12px;
+}
+
+.when-block p,
+.where-block p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 6px 0;
+}
+
+/* DIVIDER LINE */
+.divider {
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #c9a24d,
+    transparent
+  );
+}
+
+/* MAP BUTTON */
+.map-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b88a2d, #f7d774, #b88a2d);
+  color: #5a0f1b;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(184,138,45,0.45);
+}
+
+/* =========================
+   MOBILE FRIENDLY
+   ========================= */
+@media (max-width: 768px) {
+
+  .where-when-inner {
+    padding: 40px 25px;
+  }
+
+  .where-when-box {
+    flex-direction: column;
+    gap: 35px;
+    padding: 35px 25px;
+  }
+
+  .divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      #c9a24d,
+      transparent
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .name-wrapper {
   display: flex;
