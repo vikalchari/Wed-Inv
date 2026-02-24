@@ -85,10 +85,10 @@ body > *:not(#flower-container) {
   color: #5a0f1b;
 }*/
 
-.greeting {
+/*.greeting {
   background: #fbf7f2;   /* solid light background */
   padding: 24px 0;
-}
+}*/
 
 .greeting h2 {
   font-family: 'Georgia', serif;
