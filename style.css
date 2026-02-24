@@ -622,7 +622,10 @@ body > *:not(#flower-container) {
 
  .countdown-title {
     letter-spacing: 0.5px;
+    padding: 0 12px;
   }
+
+  
   
 }
 
