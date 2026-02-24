@@ -359,7 +359,7 @@ body > *:not(#flower-container) {
   font-family: 'Cinzel', serif;
 
   text-align: center;
-  font-size: clamp(1.4rem, 4.5vw, 2.2rem); /* 🔥 auto scales */
+  font-size: clamp(1.4rem, 4.5vw, 1.8rem); /* 🔥 auto scales */
   line-height: 1.3;
   letter-spacing: 1px;
 
