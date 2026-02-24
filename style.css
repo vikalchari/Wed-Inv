@@ -101,7 +101,7 @@ body > *:not(#flower-container) {
 .greeting h2::after {
   content: "";
   display: block;
-  width: 180px;
+  width: 380px;
   height: 3px;
   margin: 12px auto 0;
   box-shadow: 0 2px 6px rgba(201, 162, 77, 0.6);
