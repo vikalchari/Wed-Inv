@@ -101,7 +101,7 @@ body > *:not(#flower-container) {
 .greeting h2::after {
   content: "";
   display: block;
-  width: 80px;
+  width: 180px;
   height: 2px;
   margin: 12px auto 0;
   background: linear-gradient(
