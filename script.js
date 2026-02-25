@@ -161,9 +161,16 @@ setInterval(createFlower, 240);
 });*/
 
 
-document.querySelectorAll('.event-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.parentElement.classList.toggle('active');
+document.querySelectorAll('.event-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const currentBox = button.parentElement;
+
+    document.querySelectorAll('.event-box').forEach(box => {
+      if (box !== currentBox) {
+        box.classList.remove('active');
+      }
+    });
+
+    currentBox.classList.toggle('active');
   });
 });
-
