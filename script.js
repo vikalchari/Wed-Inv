@@ -154,8 +154,16 @@ setInterval(createFlower, 240);
   /* ===============================
      Event box button============================== */
 
+/*document.querySelectorAll('.event-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('active');
+  });
+});*/
+
+
 document.querySelectorAll('.event-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
     btn.parentElement.classList.toggle('active');
   });
 });
+
