@@ -695,7 +695,7 @@ body > *:not(#flower-container) {
 .letter-title::after {
   content: "";
   display: block;
-  width: 420px;
+  width: 650px;
   height: 2px;
   margin: 14px auto 0;
   background: linear-gradient(
