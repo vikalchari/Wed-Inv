@@ -151,4 +151,12 @@ setInterval(createFlower, 240);
 });
 
 
+  /* ===============================
+     Event box button============================== */
 
+document.querySelectorAll('.event-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const box = button.parentElement;
+    box.classList.toggle('active');
+  });
+});
