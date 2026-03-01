@@ -11,6 +11,7 @@ body {
   background: #fbf7f2;
   color: #1a1a1a;
   text-align: center;
+  padding-top: 0;
 }
 
 html {
@@ -107,16 +108,21 @@ body > *:not(#flower-container) {
   z-index: 1000;
   padding: 14px 0;
   border-bottom: 1px solid rgba(184, 138, 45, 0.25);
+  ackdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
 }
 
 .greeting h2 {
   font-family: 'Georgia', serif;
   /*font-size: 48px;*/
-  font-size: clamp(28px, 5vw, 48px);
+  /*font-size: clamp(28px, 5vw, 48px);*/
   color: #5a0f1b;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-shadow: 0 2px 6px rgba(168, 80, 64, 0.25);
+  font-size: 34px;   /* smaller so it doesn’t eat screen */
+  margin: 0;
+}
 }
 
 .greeting h2::after {
@@ -203,6 +209,7 @@ body > *:not(#flower-container) {
   background: #000;       /* black bars if needed */
   overflow: hidden;
   z-index: 1;
+  margin-top: 10px;
 }
 
 /* Actual video styling */
