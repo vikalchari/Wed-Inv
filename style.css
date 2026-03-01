@@ -1062,3 +1062,107 @@ body > *:not(#flower-container) {
     display: none;
   }
 }
+
+
+/* =========================
+   SEND LOVE & WISHES (ELEGANT)
+   ========================= */
+
+.wishes-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 70px 0;
+  background: linear-gradient(180deg, #fff6f0, #fff);
+}
+
+.wishes-inner {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #fffaf5;
+  border-radius: 36px;
+  padding: 55px 45px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.wishes-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  color: #a85040;
+  margin-bottom: 10px;
+}
+
+.wishes-subtitle {
+  font-size: 1.05rem;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* FORM */
+.wishes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wishes-form input,
+.wishes-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #e6cfa5;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  background: #fffdf8;
+  color: #333;
+  resize: none;
+}
+
+.wishes-form input::placeholder,
+.wishes-form textarea::placeholder {
+  color: #999;
+}
+
+/* BUTTON */
+.wishes-form button {
+  margin-top: 12px;
+  align-self: center;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #b88a2d, #f7d774);
+  color: #4a140f;
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(184,138,45,0.35);
+  transition: all 0.3s ease;
+}
+
+.wishes-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(184,138,45,0.45);
+}
+
+/* FOOT NOTE */
+.wishes-note {
+  margin-top: 35px;
+  font-size: 1.1rem;
+  color: #9c6b2f;
+  font-family: 'Great Vibes', cursive;
+}
+
+.thankyou-message {
+  margin: 80px auto;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: #a85040;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .wishes-inner {
+    padding: 40px 22px;
+  }
+}
