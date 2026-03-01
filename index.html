@@ -325,39 +325,36 @@
       Your heartfelt words mean the world to us
     </p>
 
-    <form
-      class="wishes-form"
-      action="https://formsubmit.co/vikalc09@gmail.com"
-      method="POST"
-    >
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_subject" value="💌 New Wedding Wish Received">
-      
-      <input type="hidden" name="_next" value="https://vikalchari.github.io/Wed-Inv/#thankyou">
+   <form
+  class="wishes-form"
+  id="wishesForm"
+  action="https://formsubmit.co/ajax/your@email.com"
+  method="POST"
+>
 
-      <input type="text" name="Name" placeholder="Your Name" required>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="💌 New Wedding Wish">
 
-      <textarea
-        name="Message"
-        rows="5"
-        placeholder="Write your message with love..."
-        required
-      ></textarea>
+  <input type="text" name="Name" placeholder="Your Name" required>
 
-      <button type="submit">Send Wishes</button>
-    </form>
+  <textarea
+    name="Message"
+    rows="5"
+    placeholder="Write your message with love..."
+    required
+  ></textarea>
 
-    <p class="wishes-note">
-      🌸 With gratitude and love 🌸
-    </p>
+  <button type="submit">Send Wishes</button>
+</form>
 
+    
   </div>
 </section>
 
-<div id="thankyou" class="thankyou-message">
-  Thank you for sending your love and blessings 💖
+<div id="thankYouPopup" class="thankyou-popup">
+  <div class="popup-box">
+    Thank you for sending your love and blessings 💖
+  </div>
 </div>
 
     
