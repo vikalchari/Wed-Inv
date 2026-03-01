@@ -121,13 +121,13 @@ body > *:not(#flower-container) {
 
 .greeting {
   background: #fbf7f2;   /* solid light background */
- position: sticky;
- top: 0;
-  z-index: 1000;
+ /*position: sticky;*/
+ /*top: 0;*/
+  /*z-index: 1000;*/
   /*padding: 14px 0;*/
   padding: 8px 0 4px;
   border-bottom: 1px solid rgba(184, 138, 45, 0.25);
-  ackdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.05);
 }
 
@@ -141,7 +141,6 @@ body > *:not(#flower-container) {
   text-shadow: 0 2px 6px rgba(168, 80, 64, 0.25);
   font-size: 34px;   /* smaller so it doesn’t eat screen */
   margin: 0;
-}
 }
 
 .greeting h2::after {
@@ -229,7 +228,7 @@ body > *:not(#flower-container) {
   background: #000;       /* black bars if needed */
   overflow: hidden;
   z-index: 1;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 /* Actual video styling */
