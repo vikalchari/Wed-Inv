@@ -1190,3 +1190,38 @@ body > *:not(#flower-container) {
     padding: 40px 22px;
   }
 }
+
+
+
+.wishes-wrapper {
+  position: relative;
+}
+
+.inline-thankyou {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 250, 245, 0.96);
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: #a85040;
+  text-align: center;
+
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.95);
+}
+
+.inline-thankyou.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
