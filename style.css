@@ -37,16 +37,14 @@ body > *:not(#flower-container) {
   padding: 100px 20px;
 }*/
 
+
 .top-band {
-  
   position: sticky;
   top: 0;
   z-index: 2000;
   background: #fbf7f2;
   border-bottom: 1px solid rgba(184, 138, 45, 0.25);
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
-
-  
 }
 
 
