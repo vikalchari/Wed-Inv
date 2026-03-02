@@ -161,7 +161,7 @@ setInterval(createFlower, 240);
 });*/
 
 
-document.querySelectorAll('.event-toggle').forEach(button => {
+/*document.querySelectorAll('.event-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const currentBox = button.parentElement;
 
@@ -172,5 +172,36 @@ document.querySelectorAll('.event-toggle').forEach(button => {
     });
 
     currentBox.classList.toggle('active');
+  });
+});*/
+
+
+
+
+const form = document.getElementById("wishesForm");
+const thankYou = document.getElementById("thankYouMsg");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" }
+  })
+  .then(res => {
+    if (res.ok) {
+      thankYou.classList.add("show");
+      form.reset();
+
+      setTimeout(() => {
+        thankYou.classList.remove("show");
+      }, 3000);
+    }
+  })
+  .catch(() => {
+    alert("Please try again later.");
   });
 });
