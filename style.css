@@ -1261,7 +1261,7 @@ body > *:not(#flower-container) {
 
 .place-list::-webkit-scrollbar-thumb {
   background: linear-gradient(#d4af37, #f3dd8a);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .place-list::-webkit-scrollbar-track {
