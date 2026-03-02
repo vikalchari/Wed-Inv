@@ -211,37 +211,4 @@ form.addEventListener("submit", function (e) {
   /* ===============================
    exploration box============================== */
 
-function loadNearby(type, elementId, keyword) {
-  const service = new google.maps.places.PlacesService(
-    document.createElement("div")
-  );
 
-  service.nearbySearch(
-    {
-      location: { lat: 17.385044, lng: 78.486671 }, // CHANGE TO VENUE
-      radius: 4000,
-      keyword: keyword
-    },
-    (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        const list = document.getElementById(elementId);
-        list.innerHTML = "";
-
-        results.slice(0, 10).forEach(place => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            ${place.name}
-            ⭐ ${place.rating || "4.0"}
-          `;
-          list.appendChild(li);
-        });
-      }
-    }
-  );
-}
-
-window.onload = () => {
-  loadNearby("tourist", "placesList", "tourist attraction");
-  loadNearby("food", "foodList", "restaurant cafe");
-  loadNearby("temple", "templeList", "temple");
-};
