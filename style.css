@@ -37,7 +37,7 @@ body > *:not(#flower-container) {
   padding: 100px 20px;
 }*/
 
-/*.top-band {
+.top-band {
   
   position: sticky;
   top: 0;
@@ -47,9 +47,9 @@ body > *:not(#flower-container) {
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 
   
-}*/
+}
 
-.top-band {
+/*.top-band {
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +61,7 @@ body > *:not(#flower-container) {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+}*/
 
 
 
