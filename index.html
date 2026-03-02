@@ -325,7 +325,7 @@
       Your heartfelt words mean the world to us
     </p>
 
-   <form
+  <!-- <form
   class="wishes-form"
   id="wishesForm"
   action="https://formsubmit.co/ajax/vikalc09@gmail.com"
@@ -345,17 +345,48 @@
   ></textarea>
 
   <button type="submit">Send Wishes</button>
-</form>
+</form>-->
+
+<div class="wishes-wrapper">
+
+  <form
+    class="wishes-form"
+    id="wishesForm"
+    action="https://formsubmit.co/ajax/vikalc09@gmail.com"
+    method="POST"
+  >
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="💌 New Wedding Wish">
+
+    <input type="text" name="Name" placeholder="Your Name" required>
+
+    <textarea
+      name="Message"
+      rows="5"
+      placeholder="Write your message with love..."
+      required
+    ></textarea>
+
+    <button type="submit">Send Wishes</button>
+  </form>
+
+  <!-- Thank you message -->
+  <div class="inline-thankyou" id="thankYouMsg">
+    Thank you for sending your love and blessings 💖
+  </div>
+
+</div>
 
     
   </div>
 </section>
 
-<div id="thankYouPopup" class="thankyou-popup">
+<!--<div id="thankYouPopup" class="thankyou-popup">
   <div class="popup-box">
     Thank you for sending your love and blessings 💖
   </div>
-</div>
+</div>-->
 
     
 <!-- EVENTS -->
