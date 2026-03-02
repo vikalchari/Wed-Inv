@@ -49,19 +49,6 @@ body > *:not(#flower-container) {
   
 }
 
-/*.top-band {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255, 248, 240, 0.95); /* soft elegant bg */
-  /*backdrop-filter: blur(6px);*/
-  /*padding: 12px 24px;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
-}*/
 
 
 
