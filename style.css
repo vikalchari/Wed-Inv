@@ -54,9 +54,8 @@ body > *:not(#flower-container) {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 9999;
   background: #fbf7f2;
-  border-bottom: 1px solid rgba(184, 138, 45, 0.25);
   backdrop-filter: blur(6px);
   padding: 14px 24px;
 }
