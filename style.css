@@ -37,7 +37,7 @@ body > *:not(#flower-container) {
   padding: 100px 20px;
 }*/
 
-.top-band {
+/*.top-band {
   
   position: sticky;
   top: 0;
@@ -47,6 +47,18 @@ body > *:not(#flower-container) {
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 
   
+}*/
+
+.top-band {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background: #fbf7f2;
+  border-bottom: 1px solid rgba(184, 138, 45, 0.25);
+  backdrop-filter: blur(6px);
+  padding: 14px 24px;
 }
 
 
