@@ -11,7 +11,7 @@ body {
   background: #fbf7f2;
   color: #1a1a1a;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
 html {
@@ -56,11 +56,11 @@ body > *:not(#flower-container) {
   width: 100%;
   z-index: 1000;
   background: rgba(255, 248, 240, 0.95); /* soft elegant bg */
-  backdrop-filter: blur(6px);
-  padding: 12px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*backdrop-filter: blur(6px);*/
+  /*padding: 12px 24px;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
 }*/
 
 
