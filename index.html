@@ -38,7 +38,8 @@
 
 <div class="top-band">
   <section class="greeting">
-    <h2 id="guestName"></h2>
+    <<h2 id="guestName"></h2>
+    <!--<h2 class="greeting-text">Dear Anish & Family</h2>-->
   </section>
 
   <nav class="navbar">
@@ -501,7 +502,12 @@ form.addEventListener("submit", function (e) {
 });
 </script>
 
-    
+
+
+<script>
+  const name = new URLSearchParams(window.location.search).get("name") || "Anish & Family";
+  document.getElementById("guestName").textContent = "Dear " + name;
+</script>
 
   
 </body>
