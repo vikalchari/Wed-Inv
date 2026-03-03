@@ -11,7 +11,7 @@ body {
   background: #fbf7f2;
   color: #1a1a1a;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 16px;
 }
 
 html {
@@ -40,7 +40,7 @@ body > *:not(#flower-container) {
 
 .top-band {
   position: sticky;
-  top: 0;
+  top: 16px;
   z-index: 2000;
   background: #fbf7f2;
   border-bottom: 1px solid rgba(184, 138, 45, 0.25);
