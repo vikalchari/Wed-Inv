@@ -318,13 +318,16 @@
 
     
 <!-- 💌 SEND LOVE & WISHES -->
-<section class="wishes-section">
+
+    
+
+   <!-- <section class="wishes-section">
   <div class="wishes-inner">
 
     <h2 class="wishes-title">Send Your Love & Wishes</h2>
     <p class="wishes-subtitle">
       Your heartfelt words mean the world to us
-    </p>
+    </p>-->
 
   <!-- <form
   class="wishes-form"
@@ -348,7 +351,7 @@
   <button type="submit">Send Wishes</button>
 </form>-->
 
-<div class="wishes-wrapper">
+<!--<div class="wishes-wrapper">
 
   <form
     class="wishes-form"
@@ -370,10 +373,10 @@
     ></textarea>
 
     <button type="submit">Send Wishes</button>
-  </form>
+  </form>-->
 
   <!-- Thank you message -->
-  <div class="inline-thankyou" id="thankYouMsg">
+  <!--<div class="inline-thankyou" id="thankYouMsg">
     Thank you for sending your love and blessings 💖
   </div>
 
@@ -381,10 +384,75 @@
 
     
   </div>
+</section>-->
+
+<script>
+const form = document.getElementById("wishesForm");
+const thankYou = document.getElementById("thankYouMsg");
+const wishesList = document.getElementById("wishesList");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const name = formData.get("Name");
+  const message = formData.get("Message");
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" }
+  })
+  .then(() => {
+
+    // ✅ Show thank you message (like before)
+    thankYou.classList.add("show");
+    form.reset();
+
+    setTimeout(() => {
+      thankYou.classList.remove("show");
+    }, 3000);
+
+    // ✅ Add wish instantly to Blessings Wall
+    if (wishesList) {
+      const wishCard = document.createElement("div");
+      wishCard.classList.add("wish-card");
+
+      wishCard.innerHTML = `
+        <p class="wish-message">"${message}"</p>
+        <span class="wish-name">— ${name}</span>
+      `;
+
+      wishesList.prepend(wishCard);
+    }
+
+  })
+  .catch(() => {
+
+    // ✅ Your SAME old behavior (kept exactly as you wanted)
+    thankYou.classList.add("show");
+    thankYou.textContent = "Thank you for your love & blessings 💖";
+
+  });
+});
+</script>
+
+
+
 </section>
 
+<!-- GOLDEN DIVIDER -->
+<div class="gold-divider"></div>
 
+<!-- 💖 BLESSINGS WALL -->
+<section class="wishes-display-section">
+  <h2 class="section-title">Blessings Wall</h2>
 
+  <div class="wishes-display-box" id="wishesList">
+    <!-- Wishes will appear here -->
+  </div>
+</section>
+    
 
 
 
@@ -548,6 +616,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+    
 
 
 
