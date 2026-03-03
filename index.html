@@ -519,6 +519,39 @@ form.addEventListener("submit", function (e) {
   document.getElementById("guestName").textContent = "Dear " + name;
 </script>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".event-toggle");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+
+      const currentBox = this.closest(".event-box");
+
+      // Close all others
+      document.querySelectorAll(".event-box").forEach(box => {
+        if (box !== currentBox) {
+          box.classList.remove("active");
+        }
+      });
+
+      // Toggle current
+      currentBox.classList.toggle("active");
+    });
+  });
+
+});
+</script>
+
+
+
+
+
+
+    
   
 </body>
 </html>
