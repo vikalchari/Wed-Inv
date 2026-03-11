@@ -371,7 +371,7 @@ body > *:not(#flower-container) {
 /* FULL WIDTH BAND */
 .countdown-section {
   width: 100vw;
-  margin-top: -40px;
+  margin-top: 40px;
   margin-left: calc(-50vw + 50%);
   background: linear-gradient(180deg, #fff6f0, #fff);
   padding: 30px 0;
@@ -681,7 +681,7 @@ body > *:not(#flower-container) {
   position: relative;
   z-index: 2;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 
@@ -689,6 +689,7 @@ body > *:not(#flower-container) {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom:80px;
   background: radial-gradient(
     circle at top,
     #fffdf6,
