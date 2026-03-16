@@ -689,8 +689,8 @@ body > *:not(#flower-container) {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom:60px;
-  margin-bottom:60px;
+  margin-bottom:90px;
+  margin-bottom:50px;
   background: radial-gradient(
     circle at top,
     #fffdf6,
